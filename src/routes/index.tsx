@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, useRef } from "react";
 import { Moon, Sun } from "lucide-react";
 import featuredImage from "@/assets/featured-project.jpg";
+import portraitImage from "@/assets/portrait.jpg";
 import projZapRepurpose from "@/assets/project-zapier-repurposing.png";
 import projZapLeads from "@/assets/project-zapier-leads.jpg";
 import projMakeXero from "@/assets/project-make-xero.png";
@@ -216,77 +217,90 @@ function Portfolio() {
     <div className="bg-background text-foreground font-body selection:bg-accent/30 selection:text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+        <div className="mx-auto grid h-16 max-w-7xl grid-cols-2 items-center px-6 md:grid-cols-3">
           <a href="#top" className="font-heading text-xl font-semibold uppercase tracking-tight transition-colors hover:text-accent">
-            Mariah Maico
+            <span className="text-accent">M</span>ariah <span className="text-accent">M</span>aico
           </a>
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center justify-center gap-7 md:flex">
+            <a href="#top" className="text-sm font-medium text-accent transition-colors">Home</a>
             <a href="#services" className="text-sm text-muted-ink transition-colors hover:text-accent">Services</a>
             <a href="#experience" className="text-sm text-muted-ink transition-colors hover:text-accent">Experience</a>
-            <a href="#work" className="text-sm text-muted-ink transition-colors hover:text-accent">Work</a>
+            <a href="#projects" className="text-sm text-muted-ink transition-colors hover:text-accent">Portfolio</a>
+            <a href="#contact" className="text-sm text-muted-ink transition-colors hover:text-accent">Contact</a>
+          </div>
+          <div className="flex items-center justify-end gap-3">
             <a
               href="#contact"
               onMouseDown={rippleHandler}
-              className="ripple press flex items-center gap-2 rounded-sm bg-accent py-2 pl-2 pr-3 text-sm font-medium text-accent-foreground ring-1 ring-accent transition-colors hover:bg-accent/90"
+              className="ripple press hidden items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-accent-foreground shadow-lg shadow-accent/30 transition-colors hover:bg-accent/90 md:inline-flex"
             >
-              <span className="size-4 shrink-0 rounded-full bg-white/20" />
               Let's Talk
             </a>
-            <ThemeToggle theme={theme} toggle={toggle} />
-          </div>
-          <div className="md:hidden">
             <ThemeToggle theme={theme} toggle={toggle} />
           </div>
         </div>
       </nav>
 
+
       {/* Hero */}
-      <section id="top" className="border-b border-hairline py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div ref={heroRef} className="grid gap-12 lg:grid-cols-12">
+      <section id="top" className="hero-bg border-b border-hairline py-24">
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div ref={heroRef} className="grid items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-hairline bg-surface px-3 py-1 text-xs font-medium uppercase tracking-widest text-accent reveal">
+              <div className="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-accent">
                 <span className="size-1.5 animate-pulse rounded-full bg-accent" />
                 Workflow and AI Automation Specialist
               </div>
-              <h1 className="reveal mb-8 text-balance font-heading text-6xl font-semibold uppercase leading-none tracking-tighter md:text-8xl lg:text-9xl">
-                Mariah
-                <br />
-                Maico
+              <h1 className="reveal mb-6 text-balance font-heading text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+                Providing The Best{" "}
+                <span className="relative inline-block">
+                  AI Automation
+                  <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-accent/70" />
+                </span>{" "}
+                Solutions
               </h1>
-              <p className="reveal max-w-[58ch] text-pretty text-lg text-muted-ink md:text-xl">
-                Workflow and AI Automation Specialist designing intelligent systems with Make.com,
-                Zapier, and n8n. I build AI-powered automations that streamline operations,
-                automate content creation, and quietly remove the manual work from growing teams.
+              <p className="reveal mb-8 max-w-[58ch] text-pretty text-base leading-relaxed text-muted-ink md:text-lg">
+                Designing intelligent systems with Make.com, Zapier, and n8n. I build AI-powered
+                automations that streamline operations, automate content creation, and quietly
+                remove the manual work from growing teams.
               </p>
-              <div className="reveal mt-10 space-y-3 border-l border-hairline pl-6">
-                <div className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Currently</div>
-                <p className="max-w-md text-sm leading-relaxed text-muted-ink">
-                  Building no-code/low-code AI workflows and API integrations for high-growth teams.
-                  Based in Makati City, working with US-based clients.
-                </p>
+              <div className="reveal flex flex-wrap items-center gap-4">
+                <a
+                  href="#projects"
+                  onMouseDown={rippleHandler}
+                  className="ripple press inline-flex items-center gap-3 rounded-full border border-accent/60 bg-transparent px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent/10"
+                >
+                  View Work
+                </a>
+                <a
+                  href="#contact"
+                  onMouseDown={rippleHandler}
+                  className="ripple press inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground shadow-lg shadow-accent/30 hover:bg-accent/90"
+                >
+                  Let's Talk
+                  <span className="grid size-6 place-items-center rounded-full bg-white/20">→</span>
+                </a>
               </div>
             </div>
             <div className="reveal lg:col-span-5">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-surface outline outline-1 -outline-offset-1 outline-white/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-deep/40 to-background" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-heading text-[10rem] font-semibold leading-none tracking-tighter text-white/10">
-                    MM
-                  </span>
+              <div className="relative mx-auto aspect-square w-full max-w-md">
+                <div className="absolute inset-0 animate-pulse rounded-full bg-accent/20 blur-3xl" />
+                <div className="portrait-glow relative size-full overflow-hidden rounded-full border-2 border-accent/40 bg-white">
+                  <img
+                    src={portraitImage}
+                    alt="Portrait of Mariah Maico"
+                    className="size-full object-cover"
+                  />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between border-t border-hairline bg-background/60 p-4 backdrop-blur-sm">
-                  <div>
-                    <div className="font-mono text-[10px] uppercase tracking-widest text-accent">Portrait</div>
-                    <div className="font-heading text-sm">Mariah Maico</div>
-                  </div>
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-faint-ink">MNL · PH</div>
+                <div className="absolute -bottom-2 -right-2 rounded-full border border-hairline bg-background/80 px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-accent backdrop-blur-md">
+                  Makati · PH
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Services */}
       <section id="services" className="bg-surface py-24">
