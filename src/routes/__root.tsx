@@ -82,8 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
       { name: "twitter:description", content: "Mariah's Digital Showcase is a personal portfolio website highlighting professional experience and skills." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2a5450f5-fff3-40b7-8a41-afe60ee85ad3/id-preview-16fa84b9--a2b9eead-5794-4f89-b533-3fcf6c69fd50.lovable.app-1780025847122.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2a5450f5-fff3-40b7-8a41-afe60ee85ad3/id-preview-16fa84b9--a2b9eead-5794-4f89-b533-3fcf6c69fd50.lovable.app-1780025847122.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/906f51c4-0825-40d7-923c-14764998461e/id-preview-10548f5b--a2b9eead-5794-4f89-b533-3fcf6c69fd50.lovable.app-1780026487912.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/906f51c4-0825-40d7-923c-14764998461e/id-preview-10548f5b--a2b9eead-5794-4f89-b533-3fcf6c69fd50.lovable.app-1780026487912.png" },
     ],
     links: [
       {
