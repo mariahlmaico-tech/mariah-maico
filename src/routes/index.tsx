@@ -401,21 +401,23 @@ function Portfolio() {
       </section>
 
       {/* Tech Stack */}
-      <section className="bg-surface py-24">
+      <section className="bg-panel py-24 text-panel-foreground">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="reveal mb-16 flex items-end justify-between">
-            <h2 className="font-heading text-3xl font-medium tracking-tight">Tech Stack</h2>
-            <span className="font-mono text-sm italic text-faint-ink">[02] Tools</span>
+          <div className="reveal mb-16 text-center">
+            <div className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-accent">+ Tools +</div>
+            <h2 className="font-heading text-4xl font-semibold tracking-tight">Tech Stack</h2>
           </div>
-          <div className="grid gap-px bg-hairline ring-1 ring-hairline md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {techStack.map((t) => (
-              <div key={t.label} className="reveal lift bg-surface p-8 hover:bg-background">
+              <div key={t.label} className="reveal lift rounded-2xl border border-black/5 bg-white p-6 shadow-sm hover:shadow-xl">
                 <div className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">{t.label}</div>
-                <p className="text-sm leading-relaxed text-muted-ink">{t.items}</p>
+                <p className="text-sm leading-relaxed text-panel-muted">{t.items}</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
       </section>
 
       {/* Projects Grid */}
