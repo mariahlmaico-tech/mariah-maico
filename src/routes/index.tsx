@@ -101,6 +101,11 @@ const projects = [
     body: "Automated workflow for YouTube Shorts and Facebook Reels — AI content generation, caption creation, media processing, and cross-platform publishing in one pipeline.",
   },
 ];
+
+const testimonials = [
+  {
+    swatch: "bg-deep",
+    quote:
       "Mariah re-engineered how our support team handled tickets. Response times dropped and our agents stopped drowning in repetitive work.",
     name: "Operations Lead",
     role: "US SaaS Client (via Upwork)",
