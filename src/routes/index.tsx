@@ -244,10 +244,10 @@ function Portfolio() {
       <section id="top" className="border-b border-hairline py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div ref={heroRef} className="grid gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-7">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-hairline bg-surface px-3 py-1 text-xs font-medium uppercase tracking-widest text-accent reveal">
                 <span className="size-1.5 animate-pulse rounded-full bg-accent" />
-                AI Automation Specialist
+                Workflow and AI Automation Specialist
               </div>
               <h1 className="reveal mb-8 text-balance font-heading text-6xl font-semibold uppercase leading-none tracking-tighter md:text-8xl lg:text-9xl">
                 Mariah
@@ -255,22 +255,36 @@ function Portfolio() {
                 Maico
               </h1>
               <p className="reveal max-w-[58ch] text-pretty text-lg text-muted-ink md:text-xl">
-                AI Automation Specialist designing intelligent workflows with Make.com, Zapier,
-                and n8n. I build AI-powered automations that streamline operations, automate
-                content creation, and quietly remove the manual work from growing teams.
+                Workflow and AI Automation Specialist designing intelligent systems with Make.com,
+                Zapier, and n8n. I build AI-powered automations that streamline operations,
+                automate content creation, and quietly remove the manual work from growing teams.
               </p>
-            </div>
-            <div className="reveal flex flex-col justify-end border-l border-hairline pl-8 lg:col-span-4">
-              <div className="space-y-4">
+              <div className="reveal mt-10 space-y-3 border-l border-hairline pl-6">
                 <div className="text-xs font-medium uppercase tracking-[0.2em] text-accent">Currently</div>
-                <p className="text-sm leading-relaxed text-muted-ink">
+                <p className="max-w-md text-sm leading-relaxed text-muted-ink">
                   Building no-code/low-code AI workflows and API integrations for high-growth teams.
                   Based in Makati City, working with US-based clients.
                 </p>
               </div>
             </div>
+            <div className="reveal lg:col-span-5">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-surface outline outline-1 -outline-offset-1 outline-white/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-deep/40 to-background" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="font-heading text-[10rem] font-semibold leading-none tracking-tighter text-white/10">
+                    MM
+                  </span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between border-t border-hairline bg-background/60 p-4 backdrop-blur-sm">
+                  <div>
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-accent">Portrait</div>
+                    <div className="font-heading text-sm">Mariah Maico</div>
+                  </div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-faint-ink">MNL · PH</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
       </section>
 
       {/* Services */}
