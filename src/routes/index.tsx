@@ -285,6 +285,7 @@ function Portfolio() {
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       {/* Services */}
