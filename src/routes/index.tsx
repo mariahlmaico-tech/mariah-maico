@@ -65,41 +65,42 @@ const experience = [
 
 const projects = [
   {
+    image: projZapRepurpose,
     tools: ["Zapier", "OpenAI", "Google Sheets"],
     title: "AI Content Repurposing Pipeline",
     body: "File-upload trigger generates a transcript, drafts two unique blog articles, and produces LinkedIn and Instagram posts — with keyword-based routing and Google Sheets logging.",
   },
   {
+    image: projZapLeads,
     tools: ["Zapier", "Asana", "Gmail"],
     title: "Lead Management & Follow-Up Engine",
     body: "Asana, Google Drive, and email/SMS integrations automate folder creation, recurring follow-ups for quoted leads, welcome emails, and conditional service recommendation campaigns.",
   },
   {
+    image: projMakeXero,
     tools: ["Make.com", "Asana", "Xero"],
     title: "Automated Financial Reporting",
     body: "Asana task completion triggers a Make scenario that pulls Xero transactions, generates a structured CSV matching the native export, and attaches it back to the originating task.",
   },
   {
+    image: projMakeGmail,
     tools: ["Make.com", "Gmail", "ChatGPT"],
     title: "AI Document Processing & Filing",
     body: "Gmail attachments are analyzed by ChatGPT, renamed descriptively, uploaded to Google Drive, logged in Sheets, and summarized via optional email digest.",
   },
   {
+    image: projN8nFb,
     tools: ["n8n", "Facebook", "AI"],
     title: "Facebook Support AI Agent",
     body: "Conversational AI agent answers customer inquiries on a Facebook page using a curated knowledge base — cutting response time and automating routine queries.",
   },
   {
+    image: projN8nAsmr,
     tools: ["n8n", "YouTube", "CapCut"],
     title: "Short-Form Video Content Engine",
     body: "Automated workflow for YouTube Shorts and Facebook Reels — AI content generation, caption creation, media processing, and cross-platform publishing in one pipeline.",
   },
 ];
-
-const testimonials = [
-  {
-    swatch: "bg-deep",
-    quote:
       "Mariah re-engineered how our support team handled tickets. Response times dropped and our agents stopped drowning in repetitive work.",
     name: "Operations Lead",
     role: "US SaaS Client (via Upwork)",
