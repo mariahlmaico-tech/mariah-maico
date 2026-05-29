@@ -405,14 +405,24 @@ function Portfolio() {
           </div>
           <div className="grid gap-px bg-hairline ring-1 ring-hairline md:grid-cols-2 lg:grid-cols-3">
             {projects.map((p) => (
-              <article key={p.title} className="reveal lift bg-background p-8 hover:bg-surface">
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {p.tools.map((t) => (
-                    <span key={t} className="bg-deep px-2 py-1 text-[10px] font-semibold uppercase tracking-wider">{t}</span>
-                  ))}
+              <article key={p.title} className="reveal lift group flex flex-col bg-background hover:bg-surface">
+                <div className="aspect-[16/10] w-full overflow-hidden border-b border-hairline bg-surface">
+                  <img
+                    src={p.image}
+                    alt={`${p.title} workflow diagram`}
+                    loading="lazy"
+                    className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
                 </div>
-                <h3 className="mb-4 font-heading text-2xl font-medium leading-snug">{p.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-ink">{p.body}</p>
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="mb-6 flex flex-wrap gap-2">
+                    {p.tools.map((t) => (
+                      <span key={t} className="bg-deep px-2 py-1 text-[10px] font-semibold uppercase tracking-wider">{t}</span>
+                    ))}
+                  </div>
+                  <h3 className="mb-4 font-heading text-2xl font-medium leading-snug">{p.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted-ink">{p.body}</p>
+                </div>
               </article>
             ))}
           </div>
