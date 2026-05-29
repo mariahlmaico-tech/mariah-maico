@@ -11,13 +11,13 @@ import projN8nAsmr from "@/assets/project-n8n-asmr.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mariah Maico — AI Automation Specialist" },
+      { title: "Mariah Maico — Workflow and AI Automation Specialist" },
       {
         name: "description",
         content:
-          "AI Automation Specialist building intelligent workflows with Zapier, Make.com, and n8n — streamlining operations and automating content for growing teams.",
+          "Workflow and AI Automation Specialist building intelligent systems with Zapier, Make.com, and n8n — streamlining operations and automating content for growing teams.",
       },
-      { property: "og:title", content: "Mariah Maico — AI Automation Specialist" },
+      { property: "og:title", content: "Mariah Maico — Workflow and AI Automation Specialist" },
       {
         property: "og:description",
         content:
