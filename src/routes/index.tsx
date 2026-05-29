@@ -418,7 +418,7 @@ function Portfolio() {
         </div>
       </section>
 
-      </section>
+
 
       {/* Projects Grid */}
       <section id="projects" className="py-24">
