@@ -2,7 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, useRef } from "react";
 import { Moon, Sun } from "lucide-react";
 import featuredImage from "@/assets/featured-project.jpg";
-
+import projZapRepurpose from "@/assets/project-zapier-repurposing.png";
+import projZapLeads from "@/assets/project-zapier-leads.jpg";
+import projMakeXero from "@/assets/project-make-xero.png";
+import projMakeGmail from "@/assets/project-make-gmail.png";
+import projN8nFb from "@/assets/project-n8n-fb.png";
+import projN8nAsmr from "@/assets/project-n8n-asmr.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
