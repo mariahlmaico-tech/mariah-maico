@@ -454,21 +454,21 @@ function Portfolio() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-surface py-24">
+      <section className="bg-panel py-24 text-panel-foreground">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="reveal mb-16 flex items-end justify-between">
-            <h2 className="font-heading text-3xl font-medium tracking-tight">What clients say</h2>
-            <span className="font-mono text-sm italic text-faint-ink">[04] Testimonials</span>
+          <div className="reveal mb-16 text-center">
+            <div className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-accent">+ Testimonials +</div>
+            <h2 className="font-heading text-4xl font-semibold tracking-tight">What Clients Say</h2>
           </div>
-          <div className="grid gap-px bg-hairline ring-1 ring-hairline md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             {testimonials.map((t) => (
-              <div key={t.name} className="reveal lift bg-background p-12">
-                <p className="mb-8 text-xl italic leading-relaxed text-foreground/90">"{t.quote}"</p>
+              <div key={t.name} className="reveal lift rounded-2xl border border-black/5 bg-white p-10 shadow-sm hover:shadow-xl">
+                <p className="mb-8 text-lg italic leading-relaxed text-panel-foreground/90">"{t.quote}"</p>
                 <div className="flex items-center gap-4">
-                  <div className={`size-10 rounded-full ${t.swatch}`} />
+                  <div className={`size-12 rounded-full ${t.swatch}`} />
                   <div>
-                    <div className="text-sm font-medium">{t.name}</div>
-                    <div className="text-xs text-faint-ink">{t.role}</div>
+                    <div className="text-sm font-semibold">{t.name}</div>
+                    <div className="text-xs text-panel-muted">{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -476,6 +476,7 @@ function Portfolio() {
           </div>
         </div>
       </section>
+
 
       {/* Contact / Footer */}
       <footer id="contact" className="bg-deep py-32">
