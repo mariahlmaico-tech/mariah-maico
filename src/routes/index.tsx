@@ -303,18 +303,26 @@ function Portfolio() {
 
 
       {/* Services */}
-      <section id="services" className="bg-surface py-24">
+      <section id="services" className="bg-panel py-24 text-panel-foreground">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="reveal mb-16 flex items-end justify-between">
-            <h2 className="font-heading text-3xl font-medium tracking-tight">Operational Core</h2>
-            <span className="font-mono text-sm italic text-faint-ink">[01] Services</span>
+          <div className="reveal mb-16 text-center">
+            <div className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-accent">+ Services +</div>
+            <h2 className="font-heading text-4xl font-semibold tracking-tight">Services I Offer</h2>
           </div>
-          <div className="grid gap-px bg-hairline ring-1 ring-hairline md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {services.map((s) => (
-              <div key={s.title} className="reveal lift bg-surface p-8 hover:bg-background">
-                <div className={`mb-6 size-4 shrink-0 ${s.swatch}`} />
-                <h3 className="mb-4 font-heading text-xl font-medium">{s.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-ink">{s.body}</p>
+              <div
+                key={s.title}
+                className="reveal lift group rounded-2xl border border-black/5 bg-white p-8 shadow-sm transition-shadow hover:shadow-xl"
+              >
+                <div className="mb-6 grid size-12 place-items-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+                  <span className={`size-3 rounded-sm ${s.swatch}`} />
+                </div>
+                <h3 className="mb-3 font-heading text-xl font-semibold">{s.title}</h3>
+                <p className="text-sm leading-relaxed text-panel-muted">{s.body}</p>
+                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accent">
+                  Read More <span aria-hidden>→</span>
+                </div>
               </div>
             ))}
           </div>
