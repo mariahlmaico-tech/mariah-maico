@@ -61,10 +61,13 @@
   --muted-ink: oklch(0.78 0.03 250);
   --faint-ink: oklch(0.62 0.04 250);
 
-  /* Bright panel for light sections in dark mode (services / about / testimonials) */
   --panel: oklch(0.985 0.003 250);
   --panel-foreground: oklch(0.20 0.04 260);
   --panel-muted: oklch(0.50 0.02 260);
+
+  --hero-stop-1: oklch(0.18 0.06 265);
+  --hero-stop-2: oklch(0.13 0.05 280);
+  --hero-star-opacity: 0.55;
 
   --card: var(--surface);
   --card-foreground: var(--foreground);
@@ -83,35 +86,38 @@
   --ring: var(--accent);
 }
 
-/* Light mode overrides */
+/* Light mode — warm off-white with deep indigo accent */
 .light {
-  --background: oklch(0.98 0.005 250);
-  --foreground: oklch(0.18 0.04 260);
-  --surface: oklch(0.96 0.01 250);
-  --deep: oklch(0.92 0.04 260);
-  --accent: oklch(0.55 0.20 240);
-  --accent-foreground: oklch(1 0 0);
+  --background: oklch(0.985 0.005 250);
+  --foreground: oklch(0.20 0.04 265);
+  --surface: oklch(0.965 0.008 250);
+  --deep: oklch(0.90 0.04 250);
+  --accent: oklch(0.52 0.18 258);
+  --accent-foreground: oklch(0.99 0 0);
 
-  --hairline: oklch(0.20 0.02 260 / 0.12);
-  --muted-ink: oklch(0.40 0.02 260);
-  --faint-ink: oklch(0.55 0.02 260);
+  --hairline: oklch(0.30 0.04 260 / 0.14);
+  --muted-ink: oklch(0.42 0.03 260);
+  --faint-ink: oklch(0.55 0.025 260);
 
-  --panel: oklch(0.16 0.05 265);
+  /* Invert: panel sections become deep navy for visual rhythm */
+  --panel: oklch(0.18 0.05 265);
   --panel-foreground: oklch(0.98 0.005 250);
   --panel-muted: oklch(0.78 0.03 250);
+
+  --hero-stop-1: oklch(0.97 0.015 250);
+  --hero-stop-2: oklch(0.92 0.05 258);
+  --hero-star-opacity: 0;
 }
 
-.dark {
-  --background: oklch(0.16 0.05 265);
-  --foreground: oklch(0.98 0.005 250);
-}
+.dark { color-scheme: dark; }
+.light { color-scheme: light; }
 
-/* Hero starfield + gradient */
+/* Hero starfield + gradient — theme-aware */
 .hero-bg {
   background:
-    radial-gradient(ellipse 80% 50% at 80% 20%, color-mix(in oklab, var(--accent) 35%, transparent), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 10% 80%, color-mix(in oklab, var(--deep) 60%, transparent), transparent 70%),
-    linear-gradient(135deg, oklch(0.18 0.06 265) 0%, oklch(0.13 0.05 280) 100%);
+    radial-gradient(ellipse 80% 50% at 80% 20%, color-mix(in oklab, var(--accent) 30%, transparent), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 10% 80%, color-mix(in oklab, var(--deep) 55%, transparent), transparent 70%),
+    linear-gradient(135deg, var(--hero-stop-1) 0%, var(--hero-stop-2) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -120,12 +126,12 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.6), transparent),
-    radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.5), transparent),
-    radial-gradient(1px 1px at 85% 25%, rgba(255,255,255,0.5), transparent),
-    radial-gradient(1px 1px at 15% 70%, rgba(255,255,255,0.3), transparent),
-    radial-gradient(1.5px 1.5px at 60% 15%, rgba(255,255,255,0.45), transparent);
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,var(--hero-star-opacity)), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,calc(var(--hero-star-opacity) * 0.7)), transparent),
+    radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,calc(var(--hero-star-opacity) * 0.85)), transparent),
+    radial-gradient(1px 1px at 85% 25%, rgba(255,255,255,calc(var(--hero-star-opacity) * 0.85)), transparent),
+    radial-gradient(1px 1px at 15% 70%, rgba(255,255,255,calc(var(--hero-star-opacity) * 0.55)), transparent),
+    radial-gradient(1.5px 1.5px at 60% 15%, rgba(255,255,255,calc(var(--hero-star-opacity) * 0.8)), transparent);
   pointer-events: none;
 }
 
@@ -133,8 +139,8 @@
 .portrait-glow {
   box-shadow:
     0 0 0 1px color-mix(in oklab, var(--accent) 40%, transparent),
-    0 0 60px color-mix(in oklab, var(--accent) 35%, transparent),
-    0 0 120px color-mix(in oklab, var(--accent) 20%, transparent);
+    0 0 60px color-mix(in oklab, var(--accent) 30%, transparent),
+    0 0 120px color-mix(in oklab, var(--accent) 18%, transparent);
 }
 
 
